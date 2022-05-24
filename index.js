@@ -20,7 +20,7 @@ async function requestJenkinsJob(jobName, params) {
   const req = {
     method: 'POST',
     url: `${jenkinsEndpoint}/job/${jobName}/buildWithParameters`,
-    form: params,
+    qs: params,
     headers: {
       'Authorization': `Basic ${API_TOKEN}`
     }
